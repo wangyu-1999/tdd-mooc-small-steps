@@ -69,15 +69,12 @@ function createApp(database) {
   }
 
   function calculateReduction(date) {
-    let date2;
     const dateString = date instanceof Date ? date.toISOString().split("T")[0] : undefined;
     if (dateString) {
-      date2 = Temporal.PlainDate.from(dateString);
-    } else {
-      date2 = undefined;
+      date = Temporal.PlainDate.from(dateString);
     }
     let reduction = 0;
-    if (date2 && isMonday(date2) && !isHoliday(date2)) {
+    if (date && isMonday(date) && !isHoliday(date)) {
       reduction = 35;
     }
     return reduction;
