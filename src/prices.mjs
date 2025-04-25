@@ -87,7 +87,7 @@ function createApp(database) {
     for (let row of holidays) {
       let holiday = new Date(row.holiday);
       let holiday2 = Temporal.PlainDate.from(row.holiday);
-      console.log(row.holiday, holiday);
+      console.log(row.holiday, holiday, holiday2);
       console.log("here");
       if (
         date &&
