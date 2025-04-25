@@ -88,7 +88,6 @@ function createApp(database) {
       let holiday = date instanceof Date ? new Date(row.holiday) : Temporal.PlainDate.from(row.holiday);
       let holiday2 = Temporal.PlainDate.from(row.holiday);
       console.log(row.holiday, holiday, holiday2);
-      console.log("here");
       if (
         date &&
         date instanceof Date &&
