@@ -95,7 +95,7 @@ function createApp(database) {
       ) {
         return true;
       }
-      if (true) {
+      if (date) {
       }
     }
     return false;
