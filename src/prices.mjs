@@ -5,7 +5,13 @@ import express from "express";
 // Refactor the following code to get rid of the legacy Date class.
 // Use Temporal.PlainDate instead. See /test/date_conversion.spec.mjs for examples.
 
-function changeDateToTemporalDate(date) {}
+function changeDateToTemporalDate(date) {
+  const dateString = date instanceof Date ? date.toISOString().split("T")[0] : undefined;
+  if (dateString) {
+    date = Temporal.PlainDate.from(dateString);
+  }
+  return date;
+}
 
 function createApp(database) {
   const app = express();
