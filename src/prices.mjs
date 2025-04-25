@@ -88,6 +88,7 @@ function createApp(database) {
       console.log(row.holiday, holiday);
       if (
         date &&
+        date instanceof Date &&
         date.getFullYear() === holiday.getFullYear() &&
         date.getMonth() === holiday.getMonth() &&
         date.getDate() === holiday.getDate()
