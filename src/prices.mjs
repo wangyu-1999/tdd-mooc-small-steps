@@ -86,6 +86,7 @@ function createApp(database) {
     for (let row of holidays) {
       let holiday = new Date(row.holiday);
       console.log(row.holiday, holiday);
+      console.log("here");
       if (
         date &&
         date instanceof Date &&
