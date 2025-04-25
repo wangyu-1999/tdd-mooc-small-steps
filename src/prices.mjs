@@ -88,8 +88,7 @@ function createApp(database) {
   }
 
   function isMonday(date) {
-    const res = date instanceof Date ? date.getDay() : date.day;
-    console.log("isMonday", date instanceof Date, res);
+    const res = date instanceof Date ? date.getDay() : date.dayOfWeek;
     return res === 1;
   }
 
