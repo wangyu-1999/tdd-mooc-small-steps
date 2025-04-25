@@ -72,7 +72,6 @@ function createApp(database) {
     console.log("here", date);
     let date2;
     const dateString = date instanceof Date ? date.toISOString().split("T")[0] : undefined;
-    console.log("dateString", dateString);
     if (dateString) {
       date2 = Temporal.PlainDate.from(dateString);
     } else {
