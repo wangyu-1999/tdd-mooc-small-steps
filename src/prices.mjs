@@ -95,7 +95,7 @@ function createApp(database) {
       ) {
         return true;
       }
-      if (date && date instanceof Temporal.PlainDate) {
+      if (date && date instanceof Temporal.PlainDate && date.year === holiday.year) {
       }
     }
     return false;
