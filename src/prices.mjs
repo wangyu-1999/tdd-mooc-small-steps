@@ -81,7 +81,7 @@ function createApp(database) {
     if (date) console.log(date, isMonday(date), !isHoliday(date));
     if (date2) console.log(date2, isMonday(date2), !isHoliday(date2));
     let reduction = 0;
-    if (date && isMonday(date) && !isHoliday(date)) {
+    if (date2 && isMonday(date2) && !isHoliday(date2)) {
       reduction = 35;
     }
     return reduction;
