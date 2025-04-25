@@ -95,7 +95,7 @@ function createApp(database) {
       ) {
         return true;
       }
-      if (date) {
+      if (date && date instanceof Temporal.PlainDate) {
       }
     }
     return false;
