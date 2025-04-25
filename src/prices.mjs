@@ -73,6 +73,11 @@ function createApp(database) {
     let date2;
     const dateString = date instanceof Date ? date.toISOString().split("T")[0] : undefined;
     console.log("dateString", dateString);
+    if (dateString) {
+      date2 = Temporal.PlainDate.from(dateString);
+    } else {
+      date2 = undefined;
+    }
     let reduction = 0;
     if (date && isMonday(date) && !isHoliday(date)) {
       reduction = 35;
