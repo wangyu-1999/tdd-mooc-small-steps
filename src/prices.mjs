@@ -95,7 +95,14 @@ function createApp(database) {
       ) {
         return true;
       }
-      if (date && date instanceof Temporal.PlainDate && date.year === holiday.year) {
+      if (
+        date &&
+        date instanceof Temporal.PlainDate &&
+        date.year === holiday.year &&
+        date.month === holiday.month &&
+        date.day === holiday.day
+      ) {
+        return true;
       }
     }
     return false;
