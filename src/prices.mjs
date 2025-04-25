@@ -71,6 +71,7 @@ function createApp(database) {
   function calculateReduction(date) {
     console.log("here", date);
     let date2;
+    const dateString = date instanceof Date ? date.toISOString().split("T")[0] : undefined;
     let reduction = 0;
     if (date && isMonday(date) && !isHoliday(date)) {
       reduction = 35;
